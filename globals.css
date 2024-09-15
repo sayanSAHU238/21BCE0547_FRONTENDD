@@ -1,0 +1,112 @@
+/* styles/globals.css */
+
+/* Define color variables */
+:root {
+    --primary-color: #6c757d; /* Soft gray-blue */
+    --primary-light: #adb5bd; /* Light gray-blue */
+    --primary-dark: #495057; /* Darker gray-blue */
+    --background-color: #e9ecef; /* Light gray */
+    --card-background: #ffffff; /* White */
+    --card-shadow: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+    --text-color: #343a40; /* Dark gray */
+    --heading-color: #212529; /* Almost black */
+    --input-border: #ced4da; /* Light gray border */
+    --input-focus: #6c757d; /* Gray-blue for focus state */
+    --button-text: #ffffff; /* White text on button */
+    --button-background: #6c757d; /* Gray-blue background */
+    --button-hover: #495057; /* Darker gray-blue on hover */
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+/* App Container */
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: var(--button-text);
+}
+
+/* Input Field Styling */
+.App-input {
+    margin: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    width: 80%;
+    max-width: 600px;
+    transition: border-color 0.3s ease;
+}
+
+.App-input:focus {
+    border-color: var(--input-focus);
+    outline: none;
+}
+
+/* Button Styling */
+.App-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: var(--button-text);
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.App-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Results Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.result-item {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.result-item div {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.result-item strong {
+    color: var(--heading-color);
+}
